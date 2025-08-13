@@ -1,0 +1,30 @@
+{
+  "name": "mof-portals",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "surveys:gen": "node scripts/xlsx_to_surveyjs.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "@surveyjs/react": "^1.9.91",
+    "@upstash/ratelimit": "^1.0.0",
+    "next": "14.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "surveyjs": "^1.9.91",
+    "xlsx": "^0.18.5",
+    "yaml": "^2.2.2"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.12",
+    "typescript": "^5.1.6"
+  }
+}
